@@ -10,9 +10,6 @@ def get_key(d, v):
         if d[k] == v:
             return k
 
-def stos(s):
-    return "".join(sorted(list(s)))
-
 out = 0
 
 for line in lines:
