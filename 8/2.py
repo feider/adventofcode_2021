@@ -1,5 +1,7 @@
 lines = []
 u = set.union
+def elem(e): return next(iter(e))
+
 #with open('input_test.txt', 'r') as f:
 with open('input.txt', 'r') as f:
     for l in f:
@@ -51,7 +53,7 @@ for line in lines:
     assert(len(num[6]) == 1)
     num[6] = num[6][0]
     # 0 1 3 4 6 7 8 9
-    num[2] = [n for n in nums if len(n) == 5 and next(iter(num[8]-num[9])) in n]
+    num[2] = [n for n in nums if len(n) == 5 and elem(num[8]-num[9]) in n]
     assert(len(num[2]) == 1)
     num[2] = num[2][0]
     # 0 1 2 3 4 6 7 8 9 only 5 missing now :)
